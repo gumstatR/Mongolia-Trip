@@ -22,7 +22,7 @@ st.markdown(
 - [9月16日（2日目）](#day2)市内観光（ガンダン寺、アジアナレストラン、ザイサントルゴイ）
 - [9月17日（3日目）](#day3)テレルジ観光（亀石、乗馬1回目、ゲル泊）
 - [9月18日（4日目）](#day4)テレルジ観光（乗馬2回目、チンギスハーン騎馬像）
-- [9月19日（5日目）](#day5)市内観光（子どもの宮殿）
+- [9月19日（5日目）](#day5)市内観光（チンギスハーン国立博物館、子供の宮殿）
 - [9月20日（6日目）](#day6)市内観光（ノミンデパート、ザ・ブル）
 - [9月21日（7日目）](#day7)市内観光（スフバートル広場、ナゴミ）
 - [9月22日（8日目）](#day8)1日遅れの帰国
@@ -171,6 +171,7 @@ google_map_html_1 = """
 st.components.v1.html(google_map_html_1, height=300)
 st.image("18th-dinner1.jpg", caption="外観")
 st.image("18th-dinner2.jpg", caption="土鍋味噌ラーメンたけさん")
+st.write("ラーメンは普通に美味しかった。")
 st.image("18th-dinner3.jpg", caption="夕食のラーメン")
 
 st.markdown("---")
@@ -180,17 +181,29 @@ st.markdown("---")
 # --- 5日目 ---
 st.markdown('<div id="day5"></div>', unsafe_allow_html=True)
 st.header("9月19日 (5日目)：市内観光")
-st.write("この日はチンギスハーン国立博物館に行き、夕方演劇を見ました。")
+st.write("この日は主に国立チンギスハーン博物館と子供の宮殿に行った。")
+st.write("まずはホテルで朝食を食べた。")
 st.image("breakfast1.jpg", caption="朝食会場")
-st.image("breakfast2.jpg", caption="朝食会場")
+st.write("ここでもバイキング形式で嬉しい。")
+st.image("breakfast2.jpg", caption="朝食バイキング")
 st.image("19th-breakfast.jpg", caption="朝食")
+st.write("１０時前にお出かけした。良い天気。")
 st.image("19th-hotel.jpg", caption="ホテル")
+st.write("１０時３０分頃、国立チンギスハン博物館に到着。")
 st.image("19th-museum1.jpg", caption="博物館")
-st.image("19th-museum2.jpg", caption="博物館")
+st.link_button(
+    "🔍国立チンギスハン博物館のホームページ",
+    "https://chinggismuseum.com/en",
+)
+st.write("９階まであって、しっかり見たら１日かかるくらい展示物が多かった。モンゴルの歴史がよく分かると思う。きっと価値の高いものが多かったんだろう。見応えがあったのは９階にあったチンギスハンの黄金像。この黄金像の部屋の前に２人のスタッフがいて、靴を脱いで鞄を外に置かなければならなかった。")
+st.image("19th-museum2.jpg", caption="チンギスハンの黄金像")
+st.write("１７時すぎに子供の宮殿に到着。ここではモンゴル伝統芸能の公演を見た。")
 st.image("19th-palace1.jpg", caption="子供の宮殿")
-st.image("19th-palace2.jpg", caption="子供の宮殿")
-st.image("19th-palace3.jpg", caption="子供の宮殿")
-st.image("19th-dinner1.jpg", caption="夕食")
+st.write("１８時から１９時５分までで、演目は馬頭琴などの伝統楽器の演奏のほか、ホーミーやオルティン・ドーなどの民謡、軟体芸など盛り沢山。")
+st.image("19th-palace2.jpg", caption="トゥメンエヘ歌舞団")
+st.image("19th-palace3.jpg", caption="トゥメンエヘ歌舞団")
+st.write("夕食はピザハットのピザを買い、ホテルで食べた。")
+st.image("19th-dinner1.jpg", caption="ピザハット")
 st.image("19th-dinner2.jpg", caption="夕食")
 st.image("19th-dinner3.jpg", caption="夕食")
 st.markdown("---")
@@ -200,13 +213,18 @@ st.markdown("---")
 # --- 6日目 ---
 st.markdown('<div id="day6"></div>', unsafe_allow_html=True)
 st.header("9月20日 (6日目)：市内観光")
-st.write("ウランバートル市内を主に徒歩で観光しました")
+st.write("この日は活動する最後の日の予定だったため、主にお土産を買うことにした。")
+st.write("多くの観光客が集まるノミンデパート。")
 st.image("20th-depart1.jpg", caption="ノミンデパート")
-st.image("20th-depart2.jpg", caption="ノミンデパート")
+st.write("地下１階に観光客向けの食品があるが、このエスカレーターの場所が分かりづらい。")
+st.image("20th-depart2.jpg", caption="ノミンデパート（１階〜地下１階）")
+st.write("街中にこのようなアイスクリーム屋がたくさんあったから食べた。")
 st.image("20th-ice1.jpg", caption="アイスクリーム")
 st.image("20th-ice2.jpg", caption="アイスクリーム")
+st.write("昼食はTHEBULLというお店でしゃぶしゃぶを食べた。")
 st.image("20th-lunch1.jpg", caption="昼食")
 st.image("20th-lunch2.jpg", caption="昼食")
+st.write("ここでついに確定してしまう。")
 st.image("20th-flight.jpg", caption="１日遅れ確定")
 
 st.markdown("---")
