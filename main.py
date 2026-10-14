@@ -1,9 +1,17 @@
 import streamlit as st
+# ⚠️ 他の st.xxx を呼ぶ前、ファイルの最上部に配置してください
+st.set_page_config(
+    page_title="モンゴル旅行の記録",
+    page_icon="🇲🇳",
+    initial_sidebar_state="collapsed",  # ← これで最初からサイドバーが閉じます！
+)
 
 st.title("🇲🇳 モンゴル旅行")
 st.write(
     "2026年9月15日〜22日、新婚旅行でモンゴルに行ってきました。"
-    "日本ではモンゴルの情報はそれほど多くないので、今後行く人の参考になればと思います。"
+    "日本ではモンゴルの情報はそれほど多くないので、皆様の参考になればと思います。"
+    "クイズのページも用意したので、ぜひお楽しみください（ページ最下部か左サイドバーのリンクから飛べます）。"
+
 )
 st.markdown("---")
 
@@ -25,9 +33,9 @@ st.markdown(
 # --- 1日目 ---
 st.markdown('<div id="day1"></div>', unsafe_allow_html=True)
 st.header("9月15日 (1日目)：モンゴルへ")
-st.write( "HIS予約したMIAT航空成田空港14:40発チンギスハーン国際空港19:15着にてモンゴルへ。")
+st.write( "HIS予約したMIAT航空成田空港14:40発チンギスハーン国際空港19:15着の便にてモンゴルへ。")
 st.image("15th-inflightmeal.jpg", caption="機内食")
-st.write("成田空港の滑走路の空き待ちで搭乗後ほぼ動かずで、30分くらい遅れで離陸しましたが、10分遅れくらいで無事にチンギスハーン国際空港に到着。")
+st.write("成田空港の滑走路の空き待ちで搭乗後しばらく動かず。30分くらい遅れで離陸。10分遅れくらいで無事にチンギスハーン国際空港に到着。")
 
 google_map_html_1 = """
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171685.9411022192!2d106.62930973437955!3d47.750554393343144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96ba829ac7f471%3A0x832c94f726f1a30e!2z44OB44Oz44Ku44K544O744OP44O844Oz5Zu96Zqb56m65riv!5e0!3m2!1sja!2sjp!4v1791699219960!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -35,7 +43,7 @@ google_map_html_1 = """
 st.components.v1.html(google_map_html_1, height=300)
 
 st.write("到着後キャリーケースを受け取り、空港で１万円を換金。225,000MNT入手。")
-st.write("タクシーよりも格安なので、バスで空港からスフバートル広場へ。写真のX19の路線")
+st.write("タクシーよりも格安なので、バスで空港からスフバートル広場へ。写真のX19の路線。")
 st.image("bus.jpeg", caption="バスの時刻表")
 st.link_button(
     "🚌 参考Webサイト（チンギスハーン国際空港のWebページ）",
@@ -84,25 +92,38 @@ st.markdown("---")
 
 # --- 3日目 ---
 st.markdown('<div id="day3"></div>', unsafe_allow_html=True)
-st.header("9月17日 (3日目)：テレルジ観光")
+st.header("9月17日 (3日目)：テレルジ観光１日目")
 st.write("ホテルで朝食をとり、チェックアウトした。HISの１泊２日のツアーに参加した。10時にホテルにガイドさんが迎えに来た。運転手さんが別にいた。")
 st.image("17th-his1.jpeg", caption="予約したツアー")
 st.image("17th-his2.jpeg", caption="ツアー行程")
 st.write("やはりウランバートル市内は渋滞。運転手さんが細い路地に入っていき、渋滞を回避しようとするが、事故を起こしそうで怖い（多分運転手は運転が上手）。")
 st.write("途中でノミンのスーパーマーケットに寄った。ガイドさんに勧められ水を買った。")
-st.write("途中アスファルト舗装がないところもあったが、12時前に無事に亀石に到着した。30分くらい自由時間となった。ここではイヌワシを持つことができる。")
+st.write("途中アスファルト舗装がないところもあったが、12時前に無事に亀石に到着した。30分くらい自由時間となった。ここではイヌワシを持つことができる（有料）。")
 st.image("17th-kame.jpg", caption="亀石")
-st.write("亀石から遊牧民宅を目指すが、道に迷う。途中で２、３回人に聞いたり、電話してたりして13時20分頃なんとか到着。HIS大丈夫か？")
+st.write("亀石から遊牧民宅を目指すが、道に迷う。ガイドさんが途中で２、３回人に聞いたり、電話してたりして13時20分頃なんとか到着。HIS大丈夫か？")
 st.write("ここで昼食をいただく。いわゆる課外学習用のゲルで、実際に住んでいるゲルには入らせてもらえなかった。")
 st.image("17th-lunch.jpg", caption="モンゴルの代表的な麺料理「ツォイワン（Tsuivan）」")
 st.write("昼食後、乗馬をした。自分で馬をコントロールすることはなく、遊牧民の人が前で馬の手綱を持っているため、乗っているだけ。")
-st.write("山林は空気が良く、黄色く色づいた黄葉が綺麗。何箇所か川を渡ったりして、これには大満足。")
+st.write("山林は空気が良く、黄色く色づいた紅葉が綺麗。何箇所か川を渡ったりして、これには大満足。")
 st.image("17th-joba1.png", caption="乗馬（一部写真を加工）")
 st.image("17th-joba2.jpg", caption="休憩時")
-st.write("乗馬の後、本日泊まるゲルに到着。場所はアロンゴ・ツーリストキャンプだった。")
+st.write("乗馬の後、泊まるゲルに到着。場所はアロンゴ・ツーリストキャンプだった。")
+google_map_html_1 = """
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1570.197108780571!2d107.43011274639122!3d47.87709665864826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d942f6f5fb48101%3A0x7976dbf7545edfee!2z44Ki44Ot44Oz44K044O744OE44O844Oq44K544OI44Kt44Oj44Oz44OX!5e0!3m2!1sja!2sjp!4v1791946310631!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+"""
+st.components.v1.html(google_map_html_1, height=300)
+
 st.image("17th-geru1.jpg", caption="アロンゴ・ツーリストキャンプ")
+st.write("夕食はここの食堂でガイドさんと運転手さんと一緒に食べた。")
+st.image("17th-dinner1.jpg", caption="夕食")
+st.image("17th-dinner2.jpg", caption="夕食")
+st.write("ゲル内の様子。寝る前には虫が入ってきた。")
 st.image("17th-geru2.jpg", caption="ゲル内")
-st.image("17th-geru3.jpg", caption="ゲル（シャワー室とトイレ）")
+st.write("デラックスプランにしていたため、シャワーとトイレがついていた。しかし、建てつけが悪くシャワーの扉はちゃんと閉じない。ドライヤーがあったが途中で壊れた。")
+st.image("17th-geru3.jpg", caption="シャワー室とトイレ")
+st.write("昼間は天気が良かったが、夕方ごろから雨が降ってきて、かなり冷えた。暖炉があり、薪を入れてもらうとすごく暖かくなるが、２時間もしたらまたすぐ冷えた。あと、写真のとおり雨漏りしていた。")
+st.image("17th-geru4.jpg", caption="暖炉と雨漏り")
+
 
 st.markdown("---")
 
@@ -112,22 +133,45 @@ st.markdown("---")
 
 # --- 4日目 ---
 st.markdown('<div id="day4"></div>', unsafe_allow_html=True)
-st.header("9月18日 (4日目)：ツアー２日目")
-st.write("HISのツアーに参加しました。乗馬2回目、チンギスハーン騎馬像を観光しました。")
+st.header("9月18日 (4日目)：テレルジ観光２日目")
+st.write("HISツアー２日目。")
+st.write("朝８時に食堂で朝食を食べた（バイキング形式）。ガイドさんも来ると思っていたが、朝食時は来なかった。")
 st.image("18th-breakfast1.jpg", caption="朝食")
 st.image("18th-breakfast2.jpg", caption="朝食")
-st.image("18th-joba1.jpg", caption="乗馬")
-st.image("18th-joba2.jpg", caption="乗馬")
-st.image("18th-lunch.jpg", caption="昼食")
-st.image("18th-kibazou1.jpg", caption="騎馬像")
-st.image("18th-kibazou2.jpg", caption="騎馬像")
-st.image("18th-kibazou3.jpg", caption="騎馬像")
-st.image("18th-hotel1.jpg", caption="ホテル")
-st.image("18th-hotel2.jpg", caption="ホテル")
-st.image("18th-hotel3.jpg", caption="ホテル")
-st.image("18th-dinner1.jpg", caption="夕食")
-st.image("18th-dinner2.jpg", caption="夕食")
-st.image("18th-dinner3.jpg", caption="夕食")
+st.write("９時４５分ガイドさん合流。雨が降っているので、この日の乗馬をやめるか、時間を短縮するか等検討したが、やることにした。")
+st.write("１０時頃アロンゴ・ツーリストキャンプから移動。すぐに乗馬する遊牧民宅に到着（昨日とは別のところ）。雨のため、乗馬の準備をしていなかったが、準備してもらった。雨の中、１０時３０分頃から乗馬開始。")
+st.image("18th-joba1.png", caption="乗馬の様子（一部加工あり）")
+st.write("乗馬開始後、雨が止んできた。この日は草原のコースで良かった。風は冷たく、寒かった。")
+st.image("18th-joba1.jpg", caption="休憩時")
+st.write("乗馬後、再びアロンゴ・ツーリストキャンプに戻って、１３時頃から昼食。ホーショルが出てきた。")
+st.image("18th-lunch.jpg", caption="昼食（ホーショル）")
+st.write("昼食後移動し、１４時３０分ごろチンギスハーン騎馬像に到着。到着時の天気は曇りだったが、帰る際には晴天になっていた。高さ４０ｍは迫力満点。")
+st.image("18th-kibazou1.jpg", caption="チンギスハーン騎馬像")
+st.link_button(
+    "🔍チンギス・カン騎馬像ホームページ",
+    "https://giantkhanstatue.com/ja/",
+)
+st.write("施設の中から登ることができた。")
+st.image("18th-kibazou2.jpg", caption="チンギスハーン騎馬像")
+st.write("中は複合施設になっていて見学できた。")
+st.image("18th-kibazou3.jpg", caption="複合施設内")
+st.image("18th-kibazou4.jpg", caption="複合施設内")
+st.write("また、ここではラクダに乗ることができた。座った状態からラクダに跨いだが、勢いよく立ち上がるため、一瞬怖いが、一周して楽しかった。他にも弓矢も体験できる。")
+st.image("18th-kibazou5.png", caption="ラクダ")
+st.write("１７時頃ホテルに到着し、HISのツアー終了。")
+st.image("18th-hotel1.jpg", caption="ウランバートルホテル（19時30分頃撮影）")
+st.write("お部屋は広く、快適。")
+st.image("18th-hotel2.jpg", caption="ウランバートルホテルのお部屋")
+st.write("バスルームに大きなバスタブとトイレ、奥にシャワールームがあった。")
+st.image("18th-hotel3.jpg", caption="バスルーム")
+st.write("散歩をしつつ、20時30頃たまたま見つけたお店でラーメンを食べた。")
+google_map_html_1 = """
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d905.3939774088424!2d106.92331209676534!3d47.91279884058488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96932ac3ef43c3%3A0xf1c77d614071ddc5!2z44Gf44GR44GV44KT5ZGz5ZmM44Op44O844Oh44OzIOOCquODquODs-ODlOODg-OCr-OCruODo-ODqeODquOCog!5e0!3m2!1sja!2sjp!4v1791954381398!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+"""
+st.components.v1.html(google_map_html_1, height=300)
+st.image("18th-dinner1.jpg", caption="外観")
+st.image("18th-dinner2.jpg", caption="土鍋味噌ラーメンたけさん")
+st.image("18th-dinner3.jpg", caption="夕食のラーメン")
 
 st.markdown("---")
 
@@ -136,7 +180,9 @@ st.markdown("---")
 # --- 5日目 ---
 st.markdown('<div id="day5"></div>', unsafe_allow_html=True)
 st.header("9月19日 (5日目)：市内観光")
-st.write("ウランバートル市内を主に徒歩で観光しました")
+st.write("この日はチンギスハーン国立博物館に行き、夕方演劇を見ました。")
+st.image("breakfast1.jpg", caption="朝食会場")
+st.image("breakfast2.jpg", caption="朝食会場")
 st.image("19th-breakfast.jpg", caption="朝食")
 st.image("19th-hotel.jpg", caption="ホテル")
 st.image("19th-museum1.jpg", caption="博物館")
@@ -208,7 +254,14 @@ st.image("22th-flight2.jpg", caption="飛行機")
 
 st.markdown("---")
 
+# メインファイルの最後のほうに追加
+st.subheader("🇲🇳 もっとモンゴルを知ろう！")
+st.write(
+    "旅行記はここまでです！お疲れ様でした。最後に、モンゴルにまつわるクイズ全10問に挑戦してみませんか？"
+)
 
+# クイズページへ移動するボタン
+st.page_link("pages/quiz.py", label="😃モンゴルクイズに挑戦する (全10問)")
 
 
 # #おまけ
