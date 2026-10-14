@@ -231,7 +231,6 @@ st.image("21th-shop3.jpg", caption="お店")
 st.image("21th-shop4.jpg", caption="お店")
 st.image("21th-lunch1.jpg", caption="昼食")
 st.image("21th-lunch2.jpg", caption="昼食")
-st.image("21th-lunch3.jpg", caption="昼食")
 
 
 st.markdown("---")
