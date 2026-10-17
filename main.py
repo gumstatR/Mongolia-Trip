@@ -8,7 +8,7 @@ st.set_page_config(
 
 st.title("🇲🇳 モンゴル旅行")
 st.write(
-    "2026年9月15日〜22日、新婚旅行でモンゴルに行ってきました。"
+    "2026年9月15日〜22日、モンゴルに行ってきました。"
     "日本ではモンゴルの情報はそれほど多くないので、皆様の参考になればと思います。"
     "クイズのページも用意したので、ぜひお楽しみください（ページ最下部か左サイドバーのリンクから飛べます）。"
 
@@ -224,8 +224,13 @@ st.image("20th-ice2.jpg", caption="アイスクリーム")
 st.write("昼食はTHEBULLというお店でしゃぶしゃぶを食べた。")
 st.image("20th-lunch1.jpg", caption="昼食")
 st.image("20th-lunch2.jpg", caption="昼食")
-st.write("ここでついに確定してしまう。")
+st.write("昼食後少しお散歩して14:40にホテルに到着。予定では21日の朝4時45分にホテルにお迎えに来てもらい、チンギスハーン空港を7時45分発の便で日本に帰る予定なので、ホテルでゆっくりしていた。")
+st.write("しかし、気がかりなのは台風25号の影響だ。台風情報を何回も確認しつつ、なんとか日本に帰れるのではないかと楽観視していた。結果的には、台風のスピードが速くなり、、、")
+st.image("20th-taihoo.png", caption="銚子地方気象台『令和８年(2026年)台風25号に関する千葉県気象速報』より")
+st.write("16時10分頃、明日日本に帰れないことが確定してしまう。乗る予定は501便。22日の午前5時に変更された。")
 st.image("20th-flight.jpg", caption="１日遅れ確定")
+st.write("空港泊することも考えたが、海外旅行保険に入っていたため、21日夜は再び東横インに泊まることにした。")
+
 
 st.markdown("---")
 
@@ -235,21 +240,26 @@ st.markdown("---")
 # --- 7日目 ---
 st.markdown('<div id="day7"></div>', unsafe_allow_html=True)
 st.header("9月21日 (7日目)：市内観光")
-st.write("ウランバートル市内を主に徒歩で観光しました")
+st.write("帰っていたら食べられなかったが、この日もウランバートルホテルで朝食を食べることができた。")
 st.image("21th-breakfast.jpg", caption="朝食")
+st.write("9時頃散歩を開始。スフバートル広場で世界平和の鐘を見つけた。")
 st.image("21th-peace1.jpg", caption="平和の鐘")
-st.image("21th-peace2.jpg", caption="平和の鐘")
+st.write("スフバートル広場で昨日まではチェスのイベントをやっていて、盛り上がっていたが、この日はやっていない。")
 st.image("21th-square1.jpg", caption="スフバートル広場")
 st.image("21th-square2.jpg", caption="スフバートル広場")
-st.image("21th-square3.jpg", caption="スフバートル広場")
+st.image("21th-square3.jpg", caption="チンギスハーン")
 st.image("21th-square4.jpg", caption="スフバートル広場")
+st.write("再び街をぶらぶらしている時に良いお店を見つける。")
 st.image("21th-shop1.jpg", caption="お店")
 st.image("21th-shop2.jpg", caption="お店")
-st.image("21th-shop3.jpg", caption="お店")
-st.image("21th-shop4.jpg", caption="お店")
+st.write("お土産で買えそうなものがたくさんあった。")
+st.image("21th-shop3.jpg", caption="店内の様子")
+st.image("21th-shop4.jpg", caption="店内の様子")
+st.write("一度ウランバートルホテルに戻り、11時30分チェックアウトし、キャリーケースをホテルに預けた。")
+st.write("昼食はNAGOMIで食べた。日本食が完全再現されていて美味しかった。")
 st.image("21th-lunch1.jpg", caption="昼食")
 st.image("21th-lunch2.jpg", caption="昼食")
-
+st.write("昼食後、ザナバザルに行き、ウランバートルホテルでキャリーケースを受け取り、東横インでチェックインした。その際、翌朝空港までのタクシーの手配をお願いした。")
 
 st.markdown("---")
 
@@ -260,14 +270,18 @@ st.markdown("---")
 # --- 8日目 ---
 st.markdown('<div id="day8"></div>', unsafe_allow_html=True)
 st.header("9月22日 (8日目)：市内観光")
-st.write("ウランバートル市内を主に徒歩で観光しました")
+st.write("朝1時に起床。1時45分にチェックアウトし、タクシーに乗った。道路はさすがに空いてて2時30分に空港に着いた。")
 st.image("22th-port1.jpg", caption="チンギスハーン国際空港")
+st.write("チンギスハーン国際空港は日本がODAで資金を援助している。")
 st.image("22th-port2.jpg", caption="チンギスハーン国際空港")
 st.image("22th-port3.jpg", caption="チンギスハーン国際空港")
 st.image("22th-port4.jpg", caption="チンギスハーン国際空港")
+st.write("空港で寝てる人がたくさんいた。")
 st.image("22th-port5.jpg", caption="チンギスハーン国際空港")
+st.write("5時に離陸した。")
 st.image("22th-flight1.jpg", caption="飛行機")
 st.image("22th-flight2.jpg", caption="飛行機")
+st.write("無事に成田空港に10時30分に到着し、家に帰った。")
 
 st.markdown("---")
 

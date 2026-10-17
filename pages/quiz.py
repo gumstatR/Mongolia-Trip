@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="モンゴルクイズ", page_icon="🎯")
 
-st.title("🎯 モンゴル旅行記念！モンゴルクイズ（全10問）")
+st.title("🎯 モンゴルクイズ（全10問）")
 st.write(
     "モンゴルにまつわるクイズです。全問正解を目指そう！"
 )
