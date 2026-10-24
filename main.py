@@ -1,11 +1,14 @@
 import streamlit as st
-# ⚠️ 他の st.xxx を呼ぶ前、ファイルの最上部に配置してください
 st.set_page_config(
     page_title="モンゴル旅行の記録",
     page_icon="🇲🇳",
     initial_sidebar_state="collapsed",  # ← これで最初からサイドバーが閉じます！
 )
+st.sidebar.header("🎵 モンゴルの雰囲気を音楽で")
 
+# st.sidebar.video にYouTubeのURLを渡すだけで、プレイヤーが設置されます
+# （デフォルトで自動再生はオフ＝ユーザーが再生ボタンを押さないと再生されません）
+st.sidebar.video("https://www.youtube.com/watch?v=p_5yt5IX38I")
 st.title("🇲🇳 モンゴル旅行")
 st.write(
     "2026年9月15日〜22日、モンゴルに行ってきました。"
